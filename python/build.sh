@@ -21,11 +21,14 @@ mkdir build
 cd build
 conan install ..
 
-find_package(Python REQUIRED COMPONENTS Interpreter Development)
+find_package (Python3 COMPONENTS Interpreter Development)
 
-message("Python_FOUND " ${Python_FOUND})
-message("Python_Interpreter_FOUND " ${Python_Interpreter_FOUND})
-message("Python_Development_FOUND " ${Python_Development_FOUND})
+echo "Python3_FOUND"
+echo "${Python3_FOUND}"
+
+# message("Python_FOUND " ${Python_FOUND})
+# message("Python_Interpreter_FOUND " ${Python_Interpreter_FOUND})
+# message("Python_Development_FOUND " ${Python_Development_FOUND})
 
 cmake .. -DCMAKE_BUILD_TYPE=Release 
 #-DPYTHON_LIBRARY=/usr/lib/python3.9.dylib -DPYTHON_INCLUDE_DIR=/usr/lib/python3.9/
