@@ -10,6 +10,9 @@ make clean
 make -f makefile_py
 cd -
 
+# detect python 
+# find_package(Python COMPONENTS Interpreter Development)
+
 echo "#############################  build wrapper ############################# "
 # build wrapper
 mkdir lib
@@ -17,7 +20,7 @@ cp ../libstarspace.a ./lib
 mkdir build
 cd build
 conan install ..
-cmake .. -DCMAKE_BUILD_TYPE=Release -DPYTHON_LIBRARY=/usr/lib/libpython3.9.dylib -DPYTHON_INCLUDE_DIR=/usr/lib/python3.9/
+cmake .. -DCMAKE_BUILD_TYPE=Release -DPYTHON_LIBRARY=/usr/lib/python3.9.dylib -DPYTHON_INCLUDE_DIR=/usr/lib/python3.9/
 cmake --build .
 cd -
 
