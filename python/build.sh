@@ -17,7 +17,7 @@ cp ../libstarspace.a ./lib
 mkdir build
 cd build
 conan install ..
-cmake .. -DCMAKE_BUILD_TYPE=Release
+cmake .. -DCMAKE_BUILD_TYPE=Release -DPYTHON_LIBRARY=/usr/lib/libpython3.6m.dylib -DPYTHON_INCLUDE_DIR=/usr/lib/python3.6m/
 cmake --build .
 cd -
 
